@@ -297,7 +297,7 @@ html {
 }
 
 .places-list {
-    margin: 16px 0;
+    margin: 16px -8px;
     padding: 32px 0;
 }
 
