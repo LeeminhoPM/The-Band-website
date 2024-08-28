@@ -63,6 +63,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px !important;
+}
+
 .btn {
     color: #fff;
     background-color: #000;
@@ -71,6 +75,7 @@ html {
     display: inline-block;
     cursor: pointer;
     border: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -146,6 +151,14 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
@@ -156,6 +169,15 @@ html {
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -195,6 +217,7 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 16px;
     margin-left: auto;
     margin-right: auto;
@@ -274,9 +297,8 @@ html {
 }
 
 .places-list {
-    margin-top: 32px;
+    margin: 16px 0;
     padding: 32px 0;
-    margin-bottom: 16px;
 }
 
 .place-img {
@@ -321,6 +343,15 @@ html {
 .contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-form .form-control {

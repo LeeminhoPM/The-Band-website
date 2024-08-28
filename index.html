@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <title>The Band</title>
 </head>
@@ -35,6 +36,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
         <!-- Slider -->
         <div id="slider">
@@ -53,15 +58,15 @@
                     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="row members-list">
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                     <p class="member-name">Taylor Swift</p>
                         <img src="./img/band/member1.jpg" alt="Taylor Swift" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Kanye West</p>
                         <img src="./img/band/member2.jpg" alt="Kanye West" class="member-img">
                     </div>
-                    <div class="col col-third text-center">
+                    <div class="col col-third s-col-full mt-32 text-center">
                         <p class="member-name">Kim Kardashian</p>
                         <img src="./img/band/member3.jpg" alt="Kim Kardashian" class="member-img">
                     </div>
@@ -83,31 +88,31 @@
 
                     <!-- Places -->
                     <div class="row places-list">
-                        <div class="col col-third">
-                            <img src="./img/places/place2.jpg" alt="Paris" class="place-img">
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./img/places/place2.jpg" alt="Paris" class="mobile-place-img place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">London</h3>
-                                <p class="place-time">Wed 10 July 1940</p>
+                                <p class="place-time">Wed 10 Jul 1940</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16">Buy Tickets</a>
+                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third">
-                            <img src="./img/places/place1.jpg" alt="Paris" class="place-img">
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./img/places/place1.jpg" alt="Paris" class="mobile-place-img place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
-                                <p class="place-time">Sat 19 August 1944</p>
+                                <p class="place-time">Sat 19 Aug 1944</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16">Buy Tickets</a>
+                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col col-third">
-                            <img src="./img/places/place3.jpg" alt="Paris" class="place-img">
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./img/places/place3.jpg" alt="Paris" class="mobile-place-img place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Berlin</h3>
-                                <p class="place-time">Mon 16 April 1945</p>
+                                <p class="place-time">Mon 16 Apr 1945</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16">Buy Tickets</a>
+                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
                             </div>
                         </div>
                     </div>
@@ -119,18 +124,18 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>Ha Noi, VN</p>
-                        <p><i class="ti-headphone-alt"></i>Phone: +84 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-headphone-alt"></i>Phone: <a href="tel:+84 151515">+84 151515</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="form-control">
                                 </div>
                             </div>
@@ -139,7 +144,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                            <input class="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -162,5 +167,36 @@
             <P id="content" class="copyright mt-16">Powered by <a href="#">Khanh PM</a></P>
         </div>
     </div>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Đóng mở menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function() {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.contains('subnav');
+                if (!isParentMenu) {
+                    header.style.height = null;
+                } else {
+                    event.preventDefault();
+                }
+            }
+        }
+    </script>
 </body>
 </html>
