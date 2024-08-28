@@ -94,7 +94,7 @@
                                 <h3 class="place-heading">London</h3>
                                 <p class="place-time">Wed 10 Jul 1940</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
+                                <button class="btn mt-16 s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third s-col-full mt-16">
@@ -103,7 +103,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 19 Aug 1944</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
+                                <button class="btn mt-16 s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third s-col-full mt-16">
@@ -112,7 +112,7 @@
                                 <h3 class="place-heading">Berlin</h3>
                                 <p class="place-time">Mon 16 Apr 1945</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn mt-16 s-full-width">Buy Tickets</a>
+                                <button class="btn mt-16 s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -133,15 +133,15 @@
                         <form action="">
                             <div class="row">
                                 <div class="col col-half s-col-full">
-                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Name" required id="contact-name" class="form-control">
                                 </div>
                                 <div class="col col-half s-col-full s-mt-8">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                    <input type="email" name="" placeholder="Email" required id="contact-email" class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-8">
                                 <div class="col col-full">
-                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Message" required id="contact-message" class="form-control">
                                 </div>
                             </div>
                             <input class="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
@@ -165,6 +165,42 @@
                 <a href="https://github.com/LeeminhoPM"><i class="ti-github"></i></a>
             </div>
             <P id="content" class="copyright mt-16">Powered by <a href="#">Khanh PM</a></P>
+        </div>
+    </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter Email...">
+
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
         </div>
     </div>
 
@@ -197,6 +233,37 @@
                 }
             }
         }
+    </script>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        // Hàm hiện modal mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Lặp qua từng the button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        // Hàm ẩn modal mua vé (gỡ bỏ class open của class modal)
+        function closeBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        // Nghe hành vi click vào button close
+        modalClose.addEventListener('click', closeBuyTickets)
+
+        modal.addEventListener('click', closeBuyTickets)
+
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
     </script>
 </body>
 </html>
