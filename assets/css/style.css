@@ -76,6 +76,8 @@ html {
     cursor: pointer;
     border: none;
     text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -209,6 +211,7 @@ html {
     font-size: 15px;
     margin-top: 25px;
     font-weight: bolder;
+    text-shadow: 0 0 1px #000;
 }
 
 #content {

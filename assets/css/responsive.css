@@ -1,4 +1,4 @@
-@media (max-width: 1039px) {
+@media (max-width: 63.9375em) {
     #nav .subnav a {
         padding: 5px 12px;
     }
@@ -9,10 +9,15 @@
 
     .contact-form .form-control {
         padding: 15px;
+        font-size: 16px;
     }
 
     .contact-info {
         line-height: 2;
+    }
+
+    .contact-submit-btn {
+        font-size: 18px;
     }
 
     #footer .socials-list {
@@ -29,7 +34,7 @@
     }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 46.1875em) {
     .s-full-width,
     .s-col-full {
         width: 100% !important;
