@@ -43,10 +43,21 @@
         </div>
         <!-- Slider -->
         <div id="slider">
+            <div class="slider-images">
+                <img class="slider-active" src="./img/slider/slider1.jpg" alt="">
+                <img src="./img/slider/slider2.jpg" alt="">
+                <img src="./img/slider/slider3.jpg" alt="">
+            </div>
             <div class="text-content">
                 <h2 class="text-heading">Manchester</h2>
                 <div class="text-decription">The atmosphere in Manchester is lorem ipsum.</div>
             </div>
+            <button class="prev" onclick="prev()">
+                <i class="ti-angle-left"></i>
+            </button>
+            <button class="next" onclick="next()">
+                <i class="ti-angle-right"></i>
+            </button>
         </div>
         <!-- Content -->
         <div id="content">
@@ -204,66 +215,6 @@
         </div>
     </div>
 
-    <script>
-        var header = document.getElementById('header');
-        var mobileMenu = document.getElementById('mobile-menu');
-        var headerHeight = header.clientHeight;
-
-        // Đóng mở menu
-        mobileMenu.onclick = function() {
-            var isClosed = header.clientHeight === headerHeight;
-            if (isClosed) {
-                header.style.height = 'auto';
-            } else {
-                header.style.height = null;
-            }
-        }
-
-        // Tự động đóng menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for (var i = 0; i < menuItems.length; i++) {
-            var menuItem = menuItems[i];
-            
-            menuItem.onclick = function() {
-                var isParentMenu = this.nextElementSibling && this.nextElementSibling.contains('subnav');
-                if (!isParentMenu) {
-                    header.style.height = null;
-                } else {
-                    event.preventDefault();
-                }
-            }
-        }
-    </script>
-
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal')
-        const modalContainer = document.querySelector('.js-modal-container')
-        const modalClose = document.querySelector('.js-modal-close')
-
-        // Hàm hiện modal mua vé (thêm class open vào modal)
-        function showBuyTickets() {
-            modal.classList.add('open')
-        }
-
-        // Lặp qua từng the button và nghe hành vi click
-        for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets)
-        }
-
-        // Hàm ẩn modal mua vé (gỡ bỏ class open của class modal)
-        function closeBuyTickets() {
-            modal.classList.remove('open')
-        }
-
-        // Nghe hành vi click vào button close
-        modalClose.addEventListener('click', closeBuyTickets)
-
-        modal.addEventListener('click', closeBuyTickets)
-
-        modalContainer.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
-    </script>
+     <script src="./script.js"></script>
 </body>
 </html>

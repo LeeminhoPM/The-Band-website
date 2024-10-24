@@ -189,8 +189,18 @@ html {
 #slider {
     position: relative;
     margin-top: 46px;
-    padding-top: 50%;
-    background: url(../../img/slider/slider1.jpg) top center / cover no-repeat;
+}
+
+#slider .slider-images img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    display: none;
+}
+
+#slider .slider-images img.slider-active {
+    display: block;
 }
 
 #slider .text-content {
@@ -212,6 +222,33 @@ html {
     margin-top: 25px;
     font-weight: bolder;
     text-shadow: 0 0 1px #000;
+}
+
+#slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 80px;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+#slider button:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#slider .next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+#slider .prev {
+    left: 0;
+    border-radius: 0 8px 8px 0;
 }
 
 #content {
