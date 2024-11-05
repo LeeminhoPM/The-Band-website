@@ -1,7 +1,6 @@
 // slider
 let currentIndex = 0;
 const images = document.querySelectorAll('.slider-images img');
-console.log(images.length);
 
 function autoSlide() {
     images.forEach(image => image.style.display = 'none');
@@ -11,10 +10,10 @@ function autoSlide() {
         currentIndex++;
     }
     images[currentIndex].style.display = 'block';
-    setTimeout(autoSlide, 2500);
+    setTimeout(autoSlide, 5000);
 }
 
-window.onload = autoSlide();
+autoSlide();
 
 function showSlide(index) {
     currentIndex = (images.length + index) % images.length;
